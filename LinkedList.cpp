@@ -69,6 +69,22 @@ cout<<"node kosong"<<endl;
     }
 }
 
+void LinkedList::deleteByValue(int input){
+	Node *tmp ;
+ Node *tmp2=head;
+ while(tmp2 != nullptr && tmp2->value != val){
+    tmp =tmp2;
+    tmp2=tmp2->next ;
+ }
+  if(tmp2!= nullptr){
+  tmp->next=tmp2->next;s
+  delete tmp2;
+  tmp2->next =nullptr;
+}else{
+cout<<"node kosong"<<endl;
+    }
+}
+
 void LinkedList::printAll(){
  Node *tmp = head ;
   while(tmp!=nullptr){
